@@ -49,6 +49,18 @@ Route::group(['middleware' => 'auth'], function() {
 
 Route::group(['prefix' => 'user', 'namespace' => 'User', 'middleware' => 'auth', 'as' => 'user.'], function() {
     Route::resource('shop', 'ShopController');
+
+    Route::resource('collection', 'CollectionController');
+
+    Route::post('/collection/updateAjax', [
+        'as' => 'collection.postUpdateAjax', 
+        'uses' => 'CollectionController@postUpdateAjax'
+    ]);
+
+    Route::post('/collection/deleteAjax', [
+        'as' => 'collection.postDeleteAjax', 
+        'uses' => 'CollectionController@postDeleteAjax'
+    ]);  
 });
 
 Route::get('/home', 'HomeController@index');

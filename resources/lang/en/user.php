@@ -6,6 +6,12 @@ return [
 
     'danger' => 'danger',
     'success' => 'success',
+    'save' => 'Save',
+    'edit' => 'Edit',
+    'update' => 'Update',
+    'title_edit' => 'Edit :name',
+    'delete' => 'Delete',
+    'index' => 'Index',
 
     'label' => [
         'name' => 'Name',
@@ -14,9 +20,15 @@ return [
         'description' => 'Description'
     ],
     'home' => 'Home',
+    'manage' => 'Manage :name',
 
     'message' => [
         'create_shop' => 'User Created Shop!',
         'create_success' => 'Create Success'
-    ]
+    ],
+
+    'sms' => [
+        'update' => 'Update Success',
+        'delete' => 'Delete Success'
+    ],
 ];

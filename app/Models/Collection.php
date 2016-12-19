@@ -10,6 +10,23 @@ use App\Models\BaseModel;
 
 class Collection extends BaseModel
 {
+    protected $table = 'collections';
+
+    protected $fillable = ['name', 'shop_id'];
+
+    public function rules($ruleName)
+    {
+        if ($ruleName == 'update') {
+            $nameRules = 'required|max:50|unique:collections,name,' . $this->id;
+        } else {
+            $nameRules = 'required|max:50|unique:collections,name';
+        }
+        
+        return [
+            'name' => $nameRules,
+        ];
+    }
+
     public function shop()
     {
         return $this->belongsTo(Shop::class);

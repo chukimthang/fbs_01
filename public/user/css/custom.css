@@ -144,3 +144,11 @@ ol, ul {
     -moz-box-shadow: 0 2px .1rem 0 rgba(0,0,0,.13);
     box-shadow: 0 2px .1rem 0 rgba(0,0,0,.13);
 }
+
+.colum {
+    text-align: center;
+}
+
+.edit-collection {
+    margin: 20px 30px;
+}
